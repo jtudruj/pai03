@@ -18,19 +18,13 @@
         
         <% List list = (List)session.getAttribute("list"); %>
         
-        <table>
+        <table border="1">
             <tr>
                 <th>ID</th>
-                <th>DC</th>
-                <th>zip</th>
                 <th>name</th>
-                <th>address1</th>
-                <th>address2</th>
-                <th>city</th>
-                <th>state</th>
                 <th>phone</th>
-                <th>fax</th>
                 <th>email</th>
+                <th>city</th>
                 <th>details</th>
                 
             </tr>
@@ -38,20 +32,16 @@
             <c:forEach items="${list}" var="element">
                 <tr>      
                     <td>${element.customer_id}</td>
-                    <td>${element.doscount_code}</td>
-                    <td>${element.zip}</td>
                     <td>${element.name}</td>
-                    <td>${element.addressline1}</td>
-                    <td>${element.addressline2}</td>
-                    <td>${element.city}</td>
-                    <td>${element.state}</td>
                     <td>${element.phone}</td>
-                    <td>${element.fax}</td>
                     <td>${element.email}</td>
+                    <td>${element.city}</td>
                     <td><a href="details.jsp?index=${list.indexOf(element)}">Details</a></td> 
                 </tr>
             </c:forEach>
         </table>
+            
+            <h3><a href="addCustomer.html">Dodaj klienta</a></h3>
             
         
     

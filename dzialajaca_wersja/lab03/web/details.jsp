@@ -24,7 +24,7 @@
         
         
         
-        <table>
+        <table border="1">
             
                 <tr>
                     <td>ID</td>
